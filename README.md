@@ -36,4 +36,6 @@ To use the AI ​​feature with ZeroStep, you must create the `zerostep.config.
             <li>Pages: Logic used to perform actions in tests</li>
         </ul>
     </li>
+
+    <strong>https://fill.dev/form/credit-card-simple</strong>
 </ul>

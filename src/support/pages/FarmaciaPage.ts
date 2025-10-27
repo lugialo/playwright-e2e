@@ -14,7 +14,7 @@ export default class FarmaciaPage extends BasePage {
 
   async preencherCamposValidos(): Promise<void> {
     await this.farmaciaElements.getBotaoCookies().click();
-    await this.farmaciaElements.getCampoNome().fill(faker.name.firstName());
+    await this.farmaciaElements.getCampoNome().fill(faker.person.firstName());
     await this.farmaciaElements.getCampoEmail().fill(faker.internet.email());
     await this.farmaciaElements.getCampoTelefone().fill(faker.phone.number());
     await this.farmaciaElements.getCampoEstado().selectOption('Santa Catarina');
@@ -37,5 +37,7 @@ export default class FarmaciaPage extends BasePage {
 
   async validarMensagem(): Promise<void> {
     await expect(this.farmaciaElements.getValidarMensagem()).toBeVisible();
+    await this.farmaciaElements.getCampoNome().click();
+    await this.farmaciaElements.getCampoTelefone().click();
   }
 }

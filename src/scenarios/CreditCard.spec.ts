@@ -11,17 +11,10 @@ test.describe('Credit Card Payment Tests', () => {
   });
 
   test('deve validar se as informações foram inseridas com sucesso', async ({ page }) => {
-    // await elements.getFieldCardName().fill('John Doe');
-    // await elements.getFieldType().selectOption('Visa');
-    // await elements.getCcNumber().fill('4111111111111111');
-    // await elements.getCcCsc().fill('123');
-    // await elements.getCcExpMonth().selectOption('12');
-    // await elements.getCcExpYear().selectOption('2025');
 
     const aiArgs = { page, test };
     await ai('enter all the values in the form and click on Pay',aiArgs);
     
-    // await page.click('button[type="submit"]');
     await expect(page).toHaveURL('https://fill.dev/submit', test);
   });
 
